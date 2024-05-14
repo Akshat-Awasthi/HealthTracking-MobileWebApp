@@ -56,7 +56,7 @@ const Page1 = () => {
     const progress = (completedCount / Goal.length) * 100;
 
     return (
-        <div className='h-[685px] overflow-y-auto'>
+        <div className='h-[1200px] overflow-y-auto'>
             <div className='bg-[#212322]'>
                 <div className='flex justify-center'>
                     <div className='w-[320px] h-[78px] flex flex-row mt-10 rounded-2xl bg-gradient-to-br from-blue-300 to-blue-700'>
@@ -114,23 +114,26 @@ const Page1 = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-row w-[325px] h-[250px] bg-[#282828] mt-10 ml-5 rounded-2xl'>
-                    <div className='flex flex-col mt-5 ml-2'>
-                        {Percentage.map((percent) => (
-                            <p key={percent} className='text-[#B5B5B5] text-[10px] mb-[26px] ml-1'>{percent}%</p>
-                        ))}
-                    </div>
-                    <div className='flex flex-row ml-4 mt-4 h-[500px]'>
-                        {Graph.map((progress) => (
-                            <div key={progress.label}>
-                                <div className="relative w-[13px] h-[220px] ml-4 rounded-sm overflow-hidden flex items-end">
-                                    <div className="bg-[#5A92CB] absolute bottom-0" style={{ height: `calc(${progress.value}% - 10px)`, width: '100%' }}></div>
-                                    <p className="absolute text-[#EBE9E8] ml-[1px] text-[7px]" style={{ bottom: `calc(${progress.value}% - 10px)` }}>{progress.value}</p>
+                <div className='flex flex-row w-full h-[280px] bg-[#282828] m-1 mt-10 justify-center  rounded-2xl'>
+                    <div className='flex flex-row'>
+                        <div className='flex flex-col mt-5 '>
+                            {Percentage.map((percent) => (
+                                <p key={percent} className='text-[#B5B5B5] text-[10px] mb-[26px]'>{percent}%</p>
+                            ))}
+                        </div>
+                        <div className='flex flex-row ml-4 mt-4 h-[500px]'>
+                            {Graph.map((progress) => (
+                                <div key={progress.label}>
+                                    <div className="relative w-[13px] h-[220px] ml-4 rounded-sm overflow-hidden flex items-end">
+                                        <div className="bg-[#5A92CB] absolute bottom-0" style={{ height: `calc(${progress.value}% - 10px)`, width: '100%' }}></div>
+                                        <p className="absolute text-[#EBE9E8] ml-[1px] text-[7px]" style={{ bottom: `calc(${progress.value}% - 10px)` }}>{progress.value}</p>
+                                    </div>
+                                    <div><p className='text-[#B5B5B5] text-[9px] ml-2 pl-1'>{progress.label}</p></div>
                                 </div>
-                                <div><p className='text-[#B5B5B5] text-[9px] ml-2 pl-1'>{progress.label}</p></div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
