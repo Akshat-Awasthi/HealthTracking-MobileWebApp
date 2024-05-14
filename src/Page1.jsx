@@ -56,7 +56,7 @@ const Page1 = () => {
     const progress = (completedCount / Goal.length) * 100;
 
     return (
-        <div className='h-[1200px] overflow-y-auto'>
+        <div className='h-full overflow-y-auto'>
             <div className='bg-[#212322]'>
                 <div className='flex justify-center'>
                     <div className='w-[320px] h-[78px] flex flex-row mt-10 rounded-2xl bg-gradient-to-br from-blue-300 to-blue-700'>
